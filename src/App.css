@@ -1,0 +1,71 @@
+/* AccordianForm.css */
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MuiAccordion-root.Mui-expanded {
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+.MuiAccordion-root.Mui-expanded .MuiCollapse-wrapperInner {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.MuiAccordion-root:not(.Mui-expanded) .MuiCollapse-wrapperInner {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.3s;
+}
+
+.form-paper {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.accordion-item {
+  border: 1px solid #c7e794;
+  border-radius: 8px;
+  box-shadow: inset;
+  transition: box-shadow 0.3s;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.accordion-header {
+  background-color: #69c5cc;
+  border-bottom: 1px solid #353232;
+  transition: box-shadow 0.3s;
+}
+
+.accordion-header:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-details {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  transition: box-shadow 0.3s;
+}
+
+.accordion-details:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
